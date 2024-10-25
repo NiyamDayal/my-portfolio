@@ -4,7 +4,7 @@ import * as d3 from "d3";
 const StockHeatmap = () => {
   const [stockData, setStockData] = useState([]);
   const heatmapRef = useRef(null);
-  const apiKey = '7LKZcOQ51rCNh5h8ERe3jh9gS7wpsrnduRbT3Qdn'; // Replace with your StockData.org API key
+  const apiKey = process.env.STOCK_API_KEY; // Replace with your StockData.org API key
   const stockSymbol = 'AAPL,TSLA,MSFT'; 
 
   useEffect(() => {
